@@ -10,7 +10,7 @@ on:
 
 jobs:
   print_file:
-    runs-on: [self-hosted, Linux, X64]
+    runs-on: ${{ github.event.inputs.runner_name }}
     steps:
       - name: Checkout repository 📦
         uses: actions/checkout@v4
