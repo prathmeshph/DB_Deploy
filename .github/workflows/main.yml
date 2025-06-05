@@ -1,0 +1,20 @@
+name: Print prathmesh.txt on Custom Runner
+
+on:
+  workflow_dispatch:
+    inputs:
+      runner_name:
+        description: 'Enter the self-hosted runner name 🖥️'
+        required: true
+        type: string
+
+jobs:
+  print_file:
+    runs-on: ${{ github.event.inputs.runner_name }}
+
+    steps:
+      - name: Checkout repository 📦
+        uses: actions/checkout@v4
+
+      - name: Print prathmesh.txt 📄
+        run: cat prathmesh.txt
