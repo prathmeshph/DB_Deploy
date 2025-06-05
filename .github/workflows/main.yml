@@ -2,11 +2,11 @@ name: Print prathmesh.txt on Custom Runner
 
 on:
   workflow_dispatch:
-    # inputs:
-    #   runner_name:
-    #     description: 'Enter the self-hosted runner name 🖥️'
-    #     required: true
-    #     type: string
+    inputs:
+      runner_name:
+        description: 'Enter the self-hosted runner name 🖥️'
+        required: true
+        type: string
 
 jobs:
   print_file:
